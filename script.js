@@ -55,6 +55,7 @@ const displayTextEl = note.querySelector("#displayText");
 const inputNoteEl = note.querySelector("#inputNote");
 const textareaEl = note.querySelector("#textarea");
 textareaEl.value = text;
+displayTextEl.innerHTML = text;
 
 editBtnEl.addEventListener("click",() => {
     displayTextEl.classList.toggle("hidden");
@@ -68,6 +69,7 @@ saveBtnEl.addEventListener("click",() => {
 
 deletBtnEl.addEventListener("click", () => {
     note.remove();
+    updateLS();
 })
 
 textareaEl.addEventListener("input", (e) => {

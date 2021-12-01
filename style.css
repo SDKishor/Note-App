@@ -17,7 +17,7 @@ body {
   position: relative;
 }
 .main_container {
-  margin: 40px;
+  margin: 50px;
   width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -103,10 +103,11 @@ body {
   font-family: inherit;
   padding: 10px;
   text-align: center;
+  overflow-wrap: break-word;
 }
 
 #addNotepadBtn {
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 20px;
   padding: 7px 15px;
@@ -126,7 +127,7 @@ body {
   display: none;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1600px) {
   .main_container {
     width: 90%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -134,5 +135,33 @@ body {
   .note {
     width: 300px;
     height: 320px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main_container {
+    width: 90%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1090px) {
+  .main_container {
+    width: 90%;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 830px) {
+  .main_container {
+    width: 90%;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .main_container {
+    width: 90%;
+    grid-template-columns: 1fr;
   }
 }
